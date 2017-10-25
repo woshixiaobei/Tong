@@ -79,46 +79,6 @@
     
 }
 
-//- (void)loginWithToken {
-//    
-//    @weakify(self)
-//    HXMUser *user = [AccountTool userInfo];
-//    NSString *token = user.token;
-//    if (token.isNotBlank) {
-//        // hud
-//        [HXMProgressHUD showInView:self.view];
-//        [HXHttpHelper api_postSendVerficationCodeToGetTokenWithUsername:user.username withAccessToken:token success:^(id responseObject) {
-//            @strongify(self)
-//            // hide hud
-//            [HXMProgressHUD hide];
-//            if ([responseObject[@"state"] integerValue] == 0) {
-//                if ([responseObject[@"data"][@"result"] integerValue] == 0) { // 获取token成功且有效
-//                    // 跳转首页
-//                    NSLog(@"%@",user.token);
-//                    HXMMainViewController *mainViewController = [HXMMainViewController new];
-//                    [self presentViewController:mainViewController animated:YES completion:nil];
-//                } else if ([responseObject[@"data"][@"result"] integerValue] == 1) { // 获取token错误
-//                    [HXMProgressHUD showError:@"账号已登录其它设备，请重新登录" inview:self.view];
-//                    [self.loginMainView resetLogin];
-//                    
-//                } else if ([responseObject[@"data"][@"result"] integerValue] == 2) { // 获取token无效
-//                    [HXMProgressHUD showError:@"获取token失效" inview:self.view];
-//                    [self.loginMainView resetLogin];
-//                }
-//            } else {
-//                // 其他state情况
-//                [self setupUI];
-//                [HXMProgressHUD showError:@"网络出错，请重新加载..." inview:self.view];
-//            }
-//        } failure:^(NSError *error) {
-//            // hide hud
-//            [HXMProgressHUD hide];
-//            [HXMProgressHUD showError:@"网络出错，请重新加载..." inview:self.view];
-//            NSLog(@"获取token %@", error);
-//        }];
-//    }
-////    }
-//}
 #pragma mark - setupUI
 - (void)setupUI {
     
