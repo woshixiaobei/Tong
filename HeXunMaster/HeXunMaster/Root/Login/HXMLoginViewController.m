@@ -69,7 +69,7 @@
 }
 
 - (void)showClearButton {
-    
+    //清除按钮
     self.loginMainView.clearButton.hidden = YES;
     self.loginMainView.phoneNumberTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"你的手机号" attributes:@{NSForegroundColorAttributeName: UIColorFromRGBA(255.0,255.0,255.0,0.3)}];
     
