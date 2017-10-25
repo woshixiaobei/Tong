@@ -76,7 +76,6 @@
     self.loginMainView.clearCodeButton.hidden = YES;
     self.loginMainView.VerificationCodeTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"请输入验证码" attributes:@{NSForegroundColorAttributeName: UIColorFromRGBA(255.0,255.0,255.0,0.3)}];
     
-    
 }
 
 #pragma mark - setupUI
